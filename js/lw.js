@@ -1,5 +1,8 @@
 function init() {
-  letterWeight([{font: 'Helvetica', style:'bold'}, {font: 'Times New Roman', style:'bold'}]);
+  letterWeight([
+    {font: 'Helvetica', style:'bold'}
+    //{font: 'Times New Roman', style:'bold'}
+  ]);
 }
 window.onload = init;
 var timeout;
@@ -17,7 +20,7 @@ function letterWeight(typefaces) {
 function lettersToRender() {
   var letters = new Array();
   for (var c = "a"; c <= "z"; c = String.fromCharCode(c.charCodeAt(0)+1)) {
-//    letters.push(c);
+    letters.push(c);
     letters.push(c.toUpperCase());
   }
   return letters;
